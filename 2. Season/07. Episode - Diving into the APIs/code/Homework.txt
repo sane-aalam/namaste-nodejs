@@ -1,0 +1,129 @@
+
+--> step by step (finished it)
+Add the express.json middleware to your app
+Make your signup API dynamic to recive data from the end user
+User.findOne with duplucate email ids, which object returned
+API- Get user by email
+API - Feed API - GET /feed - get all the users from the database
+API - Get user by ID
+Create a delete user API
+Difference between PATCH and PUT
+API - Update a User
+
+
+// Tip-1
+- always you do DB calls
+- DB calls return promise(you have to resolve it)
+- DB calls (aysn,await best way to resolve it)
+- make sure you using Try,Catch block to make sure data getting correct way,either it will through error!
+
+// Tip-2
+- you should take care your mind,body! (Best)
+- you have to work every day 12 Hours
+
+// Tip-3 (Why we have to written this!)
+// middleware to using Json data as Object!
+/*{
+  firstName: 'Rohit Shrama T20 Winner Captain of indain!',
+  lastName: 'Captain(IndainTeam)',
+  emaildId: 'RohitBhai@gmail.com',
+  password: 'indainTeamcaptain@123',
+  age: 41,
+  gender: 'male'
+}
+*/
+
+// update method - simple & clear code
+app.patch("/user", async (req, res) => {
+  const userId = req.body.userId;
+  const data = req.body;
+  console.log(data);
+  try {
+    await User.findByIdAndUpdate({ _id: userId }, data);
+    res.send("User updated successfully!");
+  } catch (err) {
+    res.send("error are getting!");
+  }
+});
+
+// tip-4 
+returnDocument: "before" returns the original document.
+returnDocument: "after" returns the updated document.
+by default "returnDocument : "before"
+you can choose these options according to you!
+you can explore more features!
+
+// Tip-5
+you should be good developer 
+you should be good developer
+nonone can teach you all of these, you need to read documentation, explore google,ChatGPT!
+
+
+// Tip-6 explore more commands
+
+Model()
+Model.$where()
+Model.aggregate()
+Model.applyDefaults()
+Model.applyTimestamps()
+Model.applyVirtuals()
+Model.bulkSave()
+Model.bulkWrite()
+Model.castObject()
+Model.cleanIndexes()
+Model.countDocuments()
+Model.create()
+Model.createCollection()
+Model.createIndexes()
+Model.createSearchIndex()
+Model.db
+Model.deleteMany()
+Model.deleteOne()
+Model.diffIndexes()
+Model.discriminator()
+Model.distinct()
+Model.dropSearchIndex()
+Model.ensureIndexes()
+Model.estimatedDocumentCount()
+Model.events
+Model.exists()
+Model.find()
+Model.findById()
+Model.findByIdAndDelete()
+Model.findByIdAndUpdate()
+Model.findOne()
+Model.findOneAndDelete()
+Model.findOneAndReplace()
+Model.findOneAndUpdate()
+Model.hydrate()
+Model.init()
+Model.insertMany()
+Model.inspect()
+Model.listIndexes()
+Model.listSearchIndexes()
+Model.populate()
+Model.prototype.$model()
+Model.prototype.$where
+Model.prototype.base
+Model.prototype.baseModelName
+Model.prototype.collection
+Model.prototype.collection
+Model.prototype.db
+Model.prototype.deleteOne()
+Model.prototype.discriminators
+Model.prototype.increment()
+Model.prototype.model()
+Model.prototype.modelName
+Model.prototype.save()
+Model.recompileSchema()
+Model.replaceOne()
+Model.schema
+Model.startSession()
+Model.syncIndexes()
+Model.translateAliases()
+Model.updateMany()
+Model.updateOne()
+Model.updateSearchIndex()
+Model.validate()
+Model.watch()
+Model.where()
