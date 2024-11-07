@@ -1,0 +1,56 @@
+ 
+
+ -> As backend developer, we know "How to add correct data"
+
+ "firstName": "NewUser",
+  "lastName": "RohitRana",
+ "emaildId": "RohitBhai@gmail.com",
+  "password": "indainTeamcaptain@123",
+  "age": 41,
+  "gender": "male"
+
+ -> As Users,we are not gonnat to check any validation, we are just randomly inserted the data
+  1. let me understand clearly,we have to go login, we have to some pre-checked
+  same to same, before meeting senior Doctor,we have to our reports,blood report,Bp report,etc
+  "this is pre-checked" which we have to do!
+  
+firstName:"Mahendra Sighn"
+lastName :"         Dhoni"
+password :" ----------------------thalaforReason"
+age : 08
+gender :"female"
+
+Types pre-checked -->
+1. must have firstname of User
+2. must have lastname of User
+3. must have userName Length more than > 4
+4. should not have duplicate emailID 
+5. must have byDefault bio(abut the users)
+6. must have user gender "male" "female" "others"
+7. no white space (left,right side of data any types)
+
+
+Field Types and Options: -->
+
+type: Specifies the data type (e.g., String, Number, Boolean, Date, Array, ObjectId).
+unique: Ensures that the value is unique across all documents in the collection.
+required: Specifies that the field is mandatory (true or a custom error message).
+default: Sets a default value if none is provided.
+lowercase: Converts the field's value to lowercase before saving.
+uppercase: Converts the field's value to uppercase before saving.
+trim: Removes whitespace from the start and end of a string.
+min and max: Sets minimum and maximum values (for numbers and dates).
+enum: Restricts the field to a set of allowed values.
+match: Validates the field's value against a regular expression.
+validate: Custom validation function.
+
+
+Assignment-2
+- Once User Signup, UserName,UserEmail,UserPassword fix 
+- you can not modify!
+- you can only change bio,photoURL,gender,age
+
+const updates = ["bio","photoURL","gender", "age"];
+updates.object(key){
+  
+}
